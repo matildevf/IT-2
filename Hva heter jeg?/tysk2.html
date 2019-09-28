@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<HTML lang="no">
+
+  <script src="tysk2.js">
+  </script>
+
+  <head>
+    <meta charset='utf-8'>
+    <title>Hva heter jeg?</title>
+  </head>
+
+  <body>
+
+    <div id="bakgrunn"> <!-- Her kommer bakgrunn -->
+
+      <div class="niva">
+        <a href="tysk1.html"> <button id="btnNiva" width="150">Forrige nivå</button> </a> <!-- Knapp for å gå til neste nivå -->
+      </div>
+      <div class="avslutt">
+        <a href="HvaHeterJeg.html"> <button id="btnAvslutt" width="100">Avslutt</button> </a> <!-- Knapp for å gå tilbake til startsiden -->
+      </div>
+      <div id="forklaring">
+        <h2> Trykk på dyret som har dette navnet: </h2> <!-- Tekst som forklarer spillet -->
+      </div>
+      <div class="navn">
+        <p id="dyrenavn"> </p> <!-- Viser dyrenavnet -->
+      </div>
+      <div class="feilboks">
+        <p id="feiltrykk"> </p> <!-- Viser dyrenavnet -->
+      </div>
+
+      <div id="en">
+        <img src="ape.jpg" onclick = "sjekken()" style="width: 100px; height: 100px;"> <!-- Bilde av ape -->
+      </div>
+      <div id="to">
+        <img src="elefant.jpg" onclick = "sjekkto()" style="width: 100px; height: 100px;"> <!-- Bilde av elefant -->
+      </div>
+      <div id="tre">
+        <img src="kenguru.jpg" onclick = "sjekktre()" style="width: 100px; height: 100px;"> <!-- Bilde av kenguru -->
+      </div>
+      <div id="fire">
+        <img src="neshorn.jpg" onclick = "sjekkfire()" style="width: 100px; height: 100px;"> <!-- Bilde av neshorn -->
+      </div>
+      <div id="fem">
+        <img src="flodhest.jpg" onclick = "sjekkfem()" style="width: 100px; height: 100px;"> <!-- Bilde av flodhest -->
+      </div>
+      <div id="seks">
+        <img src="slange.jpg" onclick = "sjekkseks()" style="width: 100px; height: 100px;"> <!-- Bilde av slange -->
+      </div>
+      <div id="sju">
+        <img src="gepard.jpg" onclick = "sjekksju()" style="width: 100px; height: 100px;"> <!-- Bilde av gepard -->
+      </div>
+      <div id="atte">
+        <img src="tukan.jpg" onclick = "sjekkattene()" style="width: 100px; height: 100px;"> <!-- Bilde av tukan -->
+      </div>
+      <div id="ni">
+        <img src="struts.jpg" onclick = "sjekkni()" style="width: 100px; height: 100px;"> <!-- Bilde av struts -->
+      </div>
+      <div id="ti">
+        <img src="pingvin.jpg" onclick = "sjekkti()" style="width: 100px; height: 100px;"> <!-- Bilde av pingvin -->
+      </div>
+      <div id="elleve">
+        <img src="gribb.jpg" onclick = "sjekkelleve()" style="width: 100px; height: 100px;"> <!-- Bilde av gribb -->
+      </div>
+      <div id="tolv">
+        <img src="dromedar.jpg" onclick = "sjekktolv()" style="width: 100px; height: 100px;"> <!-- Bilde av dromedar -->
+      </div>
+      <div id="treten">
+        <img src="krokodille.jpg" onclick = "sjekktreten()" style="width: 100px; height: 100px;"> <!-- Bilde av krokodille -->
+      </div>
+      <div id="fjorten">
+        <img src="love.jpg" onclick = "sjekkfjorten()" style="width: 100px; height: 100px;"> <!-- Bilde av løve -->
+      </div>
+      <div id="femten">
+        <img src="maursluker.jpg" onclick = "sjekkfemten()" style="width: 100px; height: 100px;"> <!-- Bilde av maursluker -->
+      </div>
+      <div id="seksten">
+        <img src="panda.jpg" onclick = "sjekkseksten()" style="width: 100px; height: 100px;"> <!-- Bilde av panda -->
+      </div>
+      <div id="sotten">
+        <img src="sebra.jpg" onclick = "sjekksotten()" style="width: 100px; height: 100px;"> <!-- Bilde av sebra -->
+      </div>
+
+      <img id="gratulerer" src="gratulerer.jpg" width="0" height="0px"> <!-- Skjuler gratulasjonsbilde -->
+
+    </div> <!-- Her avsluttes bakgrunn -->
+
+  </body>
+
+  <style>
+
+  body {
+    background: rgba(0, 0, 0, 0.9); /* Setter bakgrunsfargen til svart */
+  }
+
+  #bakgrunn { /* Setter farge, posisjon og størrelse på bakgrunnen */
+    background-color: #ffffff;
+    background-position: center;
+    background-size: 70%;
+    height: 620px;
+    width: 1350px;
+  }
+
+  .niva button { /* Beskriver nivå-knappen */
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: #1f8706;
+    color: white;
+    border-radius: 10px;
+    border-color: #155605;
+    height: 30px;
+    font-size: 20px;
+    font-style: arial;
+  }
+
+  .avslutt button { /* Beskriver avslutt-knappen */
+    float: right;
+    margin-right: -122px;
+    margin-top: 50px;
+    background-color: #1f8706;
+    color: white;
+    border-radius: 10px;
+    border-color: #155605;
+    height: 30px;
+    font-size: 20px;
+    font-style: arial;
+  }
+
+  #forklaring h2 { /* Beskriver teksten som forklarer spillet */
+    padding-left: 10px;
+    padding-top: 10px;
+    font-family: sans-serif;
+  }
+
+  .navn p { /* Beskriver dyrenavnet */
+    padding-left: 150px;
+    padding-top: -10px;
+    font-family: sans-serif;
+    font-size: 50px;
+  }
+
+  .feilboks p { /* Beskriver teksten som viser antall feilklikk */
+    float: right;
+    margin-top: -185px;
+    margin-right: 210px;
+    color: black;
+    font-family: sans-serif;
+    font-size: 30px;
+  }
+
+  #gratulerer { /* Beskriver gratulasjonsbildet */
+    padding-left: 425px;
+    margin-top: 10px;
+    z-index: 1;
+  }
+
+  /* Plaserer boksene med bildene av dyrene */
+  #en { /* Ape */
+    margin-left: 50px;
+    margin-top: 300px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  #to { /* Elefant */
+    margin-left: 100px;
+    margin-top: 150px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  #tre { /* Kenguru */
+    margin-left: 40px;
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  #fire { /* Neshorn */
+    margin-left: 300px;
+    margin-top: 30px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  #fem { /* Flodhest */
+    margin-left: 700px;
+    margin-top: 300px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  #seks { /* Slange */
+    margin-left: 300px;
+    margin-top: 200px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  #sju { /* Gepard */
+    margin-left: 500px;
+    margin-top: 250px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  #atte { /* Tukan */
+    margin-left: 550px;
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  #ni { /* Struts */
+    margin-left: 470px;
+    margin-top: -120px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  #ti { /* Pingvin */
+    margin-left: 920px;
+    margin-top: 250px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  #elleve { /* Gribb */
+    margin-left: 850px;
+    margin-top: -150px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  #tolv { /* Dromedar */
+    margin-left: 750px;
+    margin-top: 120px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  #treten { /* Krokodille */
+    margin-left: 670px;
+    margin-top: -70px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  #fjorten { /* Løve */
+    margin-left: 1100px;
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  #femten { /* Maursluker */
+    margin-left: 900px;
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  #seksten { /* Panda */
+    margin-left: 1150px;
+    margin-top: -70px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  #sotten { /* Sebra */
+    margin-left: 1200px;
+    margin-top: 250px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  </style>
+
+</HTML>
